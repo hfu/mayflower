@@ -42,7 +42,7 @@ const map = new maplibregl.Map({
   style: '/src/style.json', // adjusted path to local style.json
   center: [0, 0], // starting position [lng, lat]
   zoom: 2, // starting zoom
-  hash: true // enable URL hash for map state
+  hash: true
 });
 
 map.addControl(new NavigationControl(), 'top-left');
