@@ -15,7 +15,7 @@ martin-install:
 	rm $(MARTIN_FN)
 
 martin-host:
-	martin -c config.yaml
+	./martin -c config.yaml
 
 extract:
 	pmtiles extract --bbox=$(BBOX) $(PMTILES_URL) v4.pmtiles

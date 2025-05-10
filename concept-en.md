@@ -8,6 +8,7 @@ This project revolves around the concept of "Free Maps Are Portable." It aims to
 1. **Hosting PMTiles with Martin**
    - Enable easy hosting of map data in the PMTiles format.
    - Currently configured to host `https://data.source.coop/protomaps/openstreetmap/v4.pmtiles`.
+   - Martin serves the tiles locally at `http://localhost:3000/v4`.
 
 2. **Fast Map Display with Vite**
    - Utilize Vite to enable map display using MapLibre GL JS.

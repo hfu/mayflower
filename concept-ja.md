@@ -8,6 +8,7 @@
 1. **Martin を使用した PMTiles のホスティング**
    - PMTiles フォーマットの地図データを簡単にホストできるようにする。
    - 現在は `https://data.source.coop/protomaps/openstreetmap/v4.pmtiles` をホストする設定を提供。
+   - Martin はタイルをローカルで `http://localhost:3000/v4` で提供します。
 
 2. **Vite を使用した高速な地図表示**
    - Vite を利用して、MapLibre GL JS を用いた地図表示を実現。

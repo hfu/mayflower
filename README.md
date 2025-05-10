@@ -26,27 +26,80 @@ Martin を使用して PMTiles ファイル `https://data.source.coop/protomaps/
    make martin-install
    ```
 
-2. Start Martin with the following command:
+2. Configure Martin to host the PMTiles file by editing `config.yaml`:
+   `config.yaml` を編集して PMTiles ファイルをホストするように Martin を設定します：
+
+   ```yaml
+   # filepath: config.yaml
+   tilesets:
+     - name: openstreetmap
+       path: https://data.source.coop/protomaps/openstreetmap/v4.pmtiles
+   ```
+
+3. Start Martin with the following command:
    以下のコマンドで Martin を起動します：
 
    ```bash
    make martin-host
    ```
 
-This will serve the PMTiles file locally.
-これにより、PMTiles ファイルがローカルで提供されます。
+This will serve the PMTiles file locally at `http://localhost:3000/v4`.
+これにより、PMTiles ファイルがローカルで `http://localhost:3000/v4` で提供されます。
 
-## Starting the Vite Development Server / Vite 開発サーバーの起動
+---
 
-To start the Vite development server and view the map in your browser, run the following command:
-Vite 開発サーバーを起動してブラウザで地図を表示するには、以下のコマンドを実行してください：
+## Using MapLibre GL JS with Vite / Vite を使用した MapLibre GL JS の利用
 
-```bash
-npm run dev
+To display the map using MapLibre GL JS, follow these steps:
+MapLibre GL JS を使用して地図を表示するには、以下の手順に従ってください：
+
+1. Install dependencies:
+   依存関係をインストールします：
+
+   ```bash
+   npm install
+   ```
+
+2. Start the Vite development server:
+   Vite 開発サーバーを起動します：
+
+   ```bash
+   npm run dev
+   ```
+
+3. Access the application in your browser at [http://localhost:5173](http://localhost:5173).
+   ブラウザで [http://localhost:5173](http://localhost:5173) にアクセスします。
+
+---
+
+## Map Style Configuration / 地図スタイルの設定
+
+The map style is defined in `src/style.json`. Initially, an external style is used:
+地図スタイルは `src/style.json` で定義されています。初期設定では外部スタイルを使用します：
+
+```json
+{
+  "version": 8,
+  "sources": {
+    "osm": {
+      "type": "vector",
+      "url": "http://localhost:3000/v4"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#ffffff"
+      }
+    }
+  ]
+}
 ```
 
-This will launch the Vite server, and you can access the application at [http://localhost:5173](http://localhost:5173).
-これにより Vite サーバーが起動し、[http://localhost:5173](http://localhost:5173) でアプリケーションにアクセスできます。
+In the future, custom styles can be generated using Apple Pkl.
+将来的には Apple Pkl を使用してカスタムスタイルを生成することが可能です。
 
 ## Configuration Files / 設定ファイル
 
