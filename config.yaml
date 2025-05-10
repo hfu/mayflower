@@ -4,4 +4,5 @@ base_path: /
 
 pmtiles:
   paths:
-    - https://data.source.coop/protomaps/openstreetmap/v4.pmtiles
+    - v4.pmtiles
+#   - https://data.source.coop/protomaps/openstreetmap/v4.pmtiles
