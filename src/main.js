@@ -2,7 +2,7 @@ import './style.css'
 import 'maplibre-gl/dist/maplibre-gl.css';
 import maplibregl from 'maplibre-gl';
 import { PMTiles, Protocol } from 'pmtiles';
-import { FullscreenControl, NavigationControl, GeolocateControl } from 'maplibre-gl';
+import { FullscreenControl, NavigationControl, GeolocateControl, GlobeControl } from 'maplibre-gl';
 
 document.querySelector('#app').innerHTML = `
   <div style="position: relative; height: 100vh; width: 100vw;">
@@ -46,6 +46,7 @@ const map = new maplibregl.Map({
 });
 
 map.addControl(new NavigationControl(), 'top-left');
+map.addControl(new GlobeControl(), 'top-left');
 map.addControl(new FullscreenControl(), 'top-right');
 map.addControl(new GeolocateControl({
   positionOptions: {

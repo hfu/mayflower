@@ -30,11 +30,23 @@ Martin を使用して PMTiles ファイル `https://data.source.coop/protomaps/
    以下のコマンドで Martin を起動します：
 
    ```bash
-   ./martin --tileset https://data.source.coop/protomaps/openstreetmap/v4.pmtiles
+   make martin-host
    ```
 
 This will serve the PMTiles file locally.
 これにより、PMTiles ファイルがローカルで提供されます。
+
+## Starting the Vite Development Server / Vite 開発サーバーの起動
+
+To start the Vite development server and view the map in your browser, run the following command:
+Vite 開発サーバーを起動してブラウザで地図を表示するには、以下のコマンドを実行してください：
+
+```bash
+npm run dev
+```
+
+This will launch the Vite server, and you can access the application at [http://localhost:5173](http://localhost:5173).
+これにより Vite サーバーが起動し、[http://localhost:5173](http://localhost:5173) でアプリケーションにアクセスできます。
 
 ## Configuration Files / 設定ファイル
 
@@ -70,4 +82,12 @@ This project uses several key configuration files to manage its functionality:
    - Initially uses an external style, but can be customized using Apple Pkl in the future.
    - MapLibre GL JS の地図スタイルを定義します。
    - 初期設定では外部スタイルを使用しますが、将来的には Apple Pkl を使用してカスタマイズ可能です。
+
+## Project Concepts / プロジェクトコンセプト
+
+For more details about the project concepts, please refer to the following documents:
+プロジェクトのコンセプトについての詳細は、以下のドキュメントをご参照ください：
+
+- [Concept (English)](concept-en.md)
+- [コンセプト (日本語)](concept-ja.md)
 
