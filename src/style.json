@@ -4,7 +4,7 @@
         "protomaps": {
             "type": "vector",
             "attribution": "<a href=\"https://github.com/protomaps/basemaps\">Protomaps</a> © <a href=\"https://openstreetmap.org\">OpenStreetMap</a>",
-            "tiles": ["http://localhost:5173/v4/{z}/{x}/{y}"]
+            "url": "/v4"
         }
     },
     "layers": [
