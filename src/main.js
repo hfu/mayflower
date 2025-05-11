@@ -39,7 +39,7 @@ mapContainer.style.height = '100vh';
 maplibregl.addProtocol('pmtiles', (new Protocol()).tile);
 const map = new maplibregl.Map({
   container: 'map', // container ID
-  style: '/src/style.json', // adjusted path to local style.json
+  style: 'style.json', // adjusted path to local style.json
   center: [0, 0], // starting position [lng, lat]
   zoom: 2, // starting zoom
   hash: true

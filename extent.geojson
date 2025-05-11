@@ -3,11 +3,6 @@
     "features": [
         {
             "type": "Feature",
-            "geometry": null,
-            "properties": {}
-        },
-        {
-            "type": "Feature",
             "geometry": {
                 "type": "Polygon",
                 "coordinates": [
@@ -129,6 +124,68 @@
                 ]
             },
             "properties": {}
+        },
+        {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            24.514813,
+                            60.352234
+                        ],
+                        [
+                            24.514813,
+                            60.049772
+                        ],
+                        [
+                            25.365752,
+                            60.049772
+                        ],
+                        [
+                            25.365752,
+                            60.352234
+                        ],
+                        [
+                            24.514813,
+                            60.352234
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            138.855304,
+                            36.599923
+                        ],
+                        [
+                            138.855304,
+                            34.88852
+                        ],
+                        [
+                            140.933421,
+                            34.88852
+                        ],
+                        [
+                            140.933421,
+                            36.599923
+                        ],
+                        [
+                            138.855304,
+                            36.599923
+                        ]
+                    ]
+                ]
+            }
         }
     ]
 }

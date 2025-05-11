@@ -34,7 +34,6 @@ Martin を使用して PMTiles ファイル `https://data.source.coop/protomaps/
    `config.yaml` を編集して PMTiles ファイルをホストするように Martin を設定します：
 
    ```yaml
-   # filepath: config.yaml
    tilesets:
      - name: openstreetmap
        path: https://data.source.coop/protomaps/openstreetmap/v4.pmtiles
@@ -105,6 +104,12 @@ The map style is defined in `src/style.json`. Initially, an external style is us
 In the future, custom styles can be generated using Apple Pkl.
 将来的には Apple Pkl を使用してカスタムスタイルを生成することが可能です。
 
+For more details on the style configuration and its evolution, refer to [dialogue.md](dialogue.md). This file contains discussions and decisions about the project's direction, including the transition from external styles to custom styles generated with Apple Pkl.
+
+スタイル設定やその進化の詳細については、[dialogue.md](dialogue.md) を参照してください。このファイルには、外部スタイルから Apple Pkl を用いたカスタムスタイルへの移行を含む、プロジェクトの方向性に関する議論や決定事項が記載されています。
+
+---
+
 ## Configuration Files / 設定ファイル
 
 This project uses several key configuration files to manage its functionality:
@@ -139,6 +144,8 @@ This project uses several key configuration files to manage its functionality:
    - Initially uses an external style, but can be customized using Apple Pkl in the future.
    - MapLibre GL JS の地図スタイルを定義します。
    - 初期設定では外部スタイルを使用しますが、将来的には Apple Pkl を使用してカスタマイズ可能です。
+
+---
 
 ## Project Concepts / プロジェクトコンセプト
 

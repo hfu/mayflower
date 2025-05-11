@@ -4,7 +4,7 @@
         "protomaps": {
             "type": "vector",
             "attribution": "<a href=\"https://github.com/protomaps/basemaps\">Protomaps</a> © <a href=\"https://openstreetmap.org\">OpenStreetMap</a>",
-            "url": "/v4"
+            "url": "pmtiles://https://data.source.coop/protomaps/openstreetmap/v4.pmtiles"
         }
     },
     "layers": [
@@ -12,7 +12,7 @@
             "id": "background",
             "type": "background",
             "paint": {
-                "background-color": "#ffffff"
+                "background-color": "#cccccc"
             }
         },
         {
@@ -26,7 +26,48 @@
             "source": "protomaps",
             "source-layer": "earth",
             "paint": {
-                "fill-color": "#ffffff"
+                "fill-color": "#e2dfda"
+            }
+        },
+        {
+            "id": "landcover",
+            "type": "fill",
+            "source": "protomaps",
+            "source-layer": "landcover",
+            "paint": {
+                "fill-color": [
+                    "match",
+                    [
+                        "get",
+                        "kind"
+                    ],
+                    "grassland",
+                    "rgba(210, 239, 207, 1)",
+                    "barren",
+                    "rgba(255, 243, 215, 1)",
+                    "urban_area",
+                    "rgba(230, 230, 230, 1)",
+                    "farmland",
+                    "rgba(216, 239, 210, 1)",
+                    "glacier",
+                    "rgba(255, 255, 255, 1)",
+                    "scrub",
+                    "rgba(234, 239, 210, 1)",
+                    "rgba(196, 231, 210, 1)"
+                ],
+                "fill-opacity": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    5,
+                    1,
+                    7,
+                    0
+                ]
             }
         },
         {
@@ -89,7 +130,7 @@
                             ]
                         ]
                     ],
-                    "#fcfcfc",
+                    "#9cd3b4",
                     [
                         "in",
                         [
@@ -105,7 +146,7 @@
                             ]
                         ]
                     ],
-                    "#fafafa",
+                    "#a0d9a0",
                     [
                         "in",
                         [
@@ -121,7 +162,7 @@
                             ]
                         ]
                     ],
-                    "#fafafa",
+                    "#99d2bb",
                     [
                         "in",
                         [
@@ -135,7 +176,7 @@
                             ]
                         ]
                     ],
-                    "#fcfcfc",
+                    "#e7e7e7",
                     [
                         "in",
                         [
@@ -149,7 +190,7 @@
                             ]
                         ]
                     ],
-                    "#fafafa",
+                    "#e2e0d7",
                     [
                         "in",
                         [
@@ -165,8 +206,8 @@
                             ]
                         ]
                     ],
-                    "#f7f7f7",
-                    "#ffffff"
+                    "#c6dcdc",
+                    "#e2dfda"
                 ]
             }
         },
@@ -183,7 +224,7 @@
                 "playground"
             ],
             "paint": {
-                "fill-color": "#fcfcfc",
+                "fill-color": "#9cd3b4",
                 "fill-opacity": 0.7
             }
         },
@@ -198,7 +239,7 @@
                 "hospital"
             ],
             "paint": {
-                "fill-color": "#f8f8f8"
+                "fill-color": "#e4dad9"
             }
         },
         {
@@ -212,7 +253,7 @@
                 "industrial"
             ],
             "paint": {
-                "fill-color": "#fcfcfc"
+                "fill-color": "#d1dde1"
             }
         },
         {
@@ -228,7 +269,7 @@
                 "college"
             ],
             "paint": {
-                "fill-color": "#f8f8f8"
+                "fill-color": "#e4ded7"
             }
         },
         {
@@ -242,7 +283,7 @@
                 "beach"
             ],
             "paint": {
-                "fill-color": "#f6f6f6"
+                "fill-color": "#e8e4d0"
             }
         },
         {
@@ -256,7 +297,7 @@
                 "zoo"
             ],
             "paint": {
-                "fill-color": "#f7f7f7"
+                "fill-color": "#c6dcdc"
             }
         },
         {
@@ -270,7 +311,7 @@
                 "aerodrome"
             ],
             "paint": {
-                "fill-color": "#fdfdfd"
+                "fill-color": "#dadbdf"
             }
         },
         {
@@ -284,7 +325,7 @@
                 "runway"
             ],
             "paint": {
-                "line-color": "#efefef",
+                "line-color": "#e9e9ed",
                 "line-width": [
                     "interpolate",
                     [
@@ -315,7 +356,7 @@
                 "taxiway"
             ],
             "paint": {
-                "line-color": "#efefef",
+                "line-color": "#e9e9ed",
                 "line-width": [
                     "interpolate",
                     [
@@ -349,7 +390,7 @@
                 ]
             ],
             "paint": {
-                "fill-color": "#efefef"
+                "fill-color": "#e9e9ed"
             }
         },
         {
@@ -363,7 +404,7 @@
             "source": "protomaps",
             "source-layer": "water",
             "paint": {
-                "fill-color": "#dcdcdc"
+                "fill-color": "#80deea"
             }
         },
         {
@@ -378,7 +419,7 @@
                 "stream"
             ],
             "paint": {
-                "line-color": "#dcdcdc",
+                "line-color": "#80deea",
                 "line-width": 0.5
             }
         },
@@ -394,7 +435,7 @@
                 "river"
             ],
             "paint": {
-                "line-color": "#dcdcdc",
+                "line-color": "#80deea",
                 "line-width": [
                     "interpolate",
                     [
@@ -425,7 +466,7 @@
                 "dam"
             ],
             "paint": {
-                "fill-color": "#fdfdfd"
+                "fill-color": "#e3e0d4"
             }
         },
         {
@@ -439,7 +480,7 @@
                 "pier"
             ],
             "paint": {
-                "fill-color": "#efefef"
+                "fill-color": "#e0e0e0"
             }
         },
         {
@@ -461,7 +502,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#d6d6d6",
+                "line-color": "#e0e0e0",
                 "line-gap-width": [
                     "interpolate",
                     [
@@ -496,7 +537,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#fcfcfc",
+                "line-color": "#e0e0e0",
                 "line-dasharray": [
                     3,
                     2
@@ -552,7 +593,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#fcfcfc",
+                "line-color": "#e0e0e0",
                 "line-dasharray": [
                     3,
                     2
@@ -611,7 +652,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#fcfcfc",
+                "line-color": "#e0e0e0",
                 "line-dasharray": [
                     3,
                     2
@@ -674,7 +715,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#fcfcfc",
+                "line-color": "#e0e0e0",
                 "line-dasharray": [
                     6,
                     0.5
@@ -732,7 +773,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#d6d6d6",
+                "line-color": "#d5d5d5",
                 "line-dasharray": [
                     4.5,
                     0.5
@@ -771,7 +812,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#d6d6d6",
+                "line-color": "#d5d5d5",
                 "line-width": [
                     "interpolate",
                     [
@@ -809,7 +850,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#d6d6d6",
+                "line-color": "#d5d5d5",
                 "line-width": [
                     "interpolate",
                     [
@@ -846,7 +887,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#d6d6d6",
+                "line-color": "#d5d5d5",
                 "line-width": [
                     "interpolate",
                     [
@@ -895,7 +936,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#d6d6d6",
+                "line-color": "#d5d5d5",
                 "line-width": [
                     "interpolate",
                     [
@@ -930,7 +971,7 @@
                 "building_part"
             ],
             "paint": {
-                "fill-color": "#efefef",
+                "fill-color": "#cccccc",
                 "fill-opacity": 0.5
             }
         },
@@ -945,7 +986,7 @@
                 "pier"
             ],
             "paint": {
-                "line-color": "#efefef",
+                "line-color": "#e0e0e0",
                 "line-width": [
                     "interpolate",
                     [
@@ -992,7 +1033,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ffffff",
+                "line-color": "#e0e0e0",
                 "line-gap-width": [
                     "interpolate",
                     [
@@ -1050,7 +1091,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ffffff",
+                "line-color": "#e0e0e0",
                 "line-gap-width": [
                     "interpolate",
                     [
@@ -1096,7 +1137,7 @@
                 "is_link"
             ],
             "paint": {
-                "line-color": "#ffffff",
+                "line-color": "#e0e0e0",
                 "line-gap-width": [
                     "interpolate",
                     [
@@ -1152,7 +1193,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ffffff",
+                "line-color": "#e0e0e0",
                 "line-gap-width": [
                     "interpolate",
                     [
@@ -1214,7 +1255,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ffffff",
+                "line-color": "#e0e0e0",
                 "line-gap-width": [
                     "interpolate",
                     [
@@ -1277,7 +1318,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#f5f5f5",
+                "line-color": "#ebebeb",
                 "line-dasharray": [
                     3,
                     1
@@ -1308,7 +1349,7 @@
                 "is_link"
             ],
             "paint": {
-                "line-color": "#ebebeb",
+                "line-color": "#ffffff",
                 "line-width": [
                     "interpolate",
                     [
@@ -1354,7 +1395,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#f5f5f5",
+                "line-color": "#ebebeb",
                 "line-width": [
                     "interpolate",
                     [
@@ -1410,7 +1451,7 @@
                     11,
                     "#ebebeb",
                     16,
-                    "#f5f5f5"
+                    "#ffffff"
                 ],
                 "line-width": [
                     "interpolate",
@@ -1455,7 +1496,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ffffff",
+                "line-color": "#e0e0e0",
                 "line-gap-width": [
                     "interpolate",
                     [
@@ -1510,7 +1551,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ebebeb",
+                "line-color": "#ffffff",
                 "line-width": [
                     "interpolate",
                     [
@@ -1558,7 +1599,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ffffff",
+                "line-color": "#e0e0e0",
                 "line-gap-width": [
                     "interpolate",
                     [
@@ -1617,7 +1658,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ebebeb",
+                "line-color": "#ffffff",
                 "line-width": [
                     "interpolate",
                     [
@@ -1656,7 +1697,7 @@
                     0.75
                 ],
                 "line-opacity": 0.5,
-                "line-color": "#d6d6d6",
+                "line-color": "#a7b1b3",
                 "line-width": [
                     "interpolate",
                     [
@@ -1765,7 +1806,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ffffff",
+                "line-color": "#e0e0e0",
                 "line-gap-width": [
                     "interpolate",
                     [
@@ -1800,7 +1841,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ffffff",
+                "line-color": "#e0e0e0",
                 "line-gap-width": [
                     "interpolate",
                     [
@@ -1852,7 +1893,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ffffff",
+                "line-color": "#e0e0e0",
                 "line-gap-width": [
                     "interpolate",
                     [
@@ -1906,7 +1947,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ffffff",
+                "line-color": "#e0e0e0",
                 "line-gap-width": [
                     "interpolate",
                     [
@@ -1959,7 +2000,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#f5f5f5",
+                "line-color": "#ebebeb",
                 "line-dasharray": [
                     2,
                     1
@@ -1999,7 +2040,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#f5f5f5",
+                "line-color": "#ffffff",
                 "line-width": [
                     "interpolate",
                     [
@@ -2038,7 +2079,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#f5f5f5",
+                "line-color": "#ffffff",
                 "line-width": [
                     "interpolate",
                     [
@@ -2076,7 +2117,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ebebeb",
+                "line-color": "#f5f5f5",
                 "line-width": [
                     "interpolate",
                     [
@@ -2120,7 +2161,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ffffff",
+                "line-color": "#e0e0e0",
                 "line-gap-width": [
                     "interpolate",
                     [
@@ -2177,7 +2218,7 @@
                 ]
             ],
             "paint": {
-                "line-color": "#ebebeb",
+                "line-color": "#ffffff",
                 "line-width": [
                     "interpolate",
                     [
@@ -2223,7 +2264,7 @@
                 "text-size": 12
             },
             "paint": {
-                "text-color": "#adadad",
+                "text-color": "#91888b",
                 "text-halo-color": "#ffffff",
                 "text-halo-width": 1
             }
@@ -3119,8 +3160,8 @@
                 "text-letter-spacing": 0.2
             },
             "paint": {
-                "text-color": "#adadad",
-                "text-halo-color": "#dcdcdc",
+                "text-color": "#728dd4",
+                "text-halo-color": "#80deea",
                 "text-halo-width": 1
             }
         },
@@ -4019,7 +4060,7 @@
                 "text-size": 12
             },
             "paint": {
-                "text-color": "#adadad",
+                "text-color": "#91888b",
                 "text-halo-color": "#ffffff",
                 "text-halo-width": 1
             }
@@ -4930,9 +4971,9 @@
                 "text-transform": "uppercase"
             },
             "paint": {
-                "text-color": "#adadad",
+                "text-color": "#728dd4",
                 "text-halo-width": 1,
-                "text-halo-color": "#dcdcdc"
+                "text-halo-color": "#80deea"
             }
         },
         {
@@ -5825,7 +5866,7 @@
             },
             "paint": {
                 "text-color": "#8f8f8f",
-                "text-halo-color": "#ffffff",
+                "text-halo-color": "#e0e0e0",
                 "text-halo-width": 1
             }
         },
@@ -6733,8 +6774,8 @@
                 "text-max-width": 9
             },
             "paint": {
-                "text-color": "#adadad",
-                "text-halo-color": "#dcdcdc",
+                "text-color": "#728dd4",
+                "text-halo-color": "#80deea",
                 "text-halo-width": 1
             }
         },
@@ -7632,8 +7673,1039 @@
                 "text-size": 12
             },
             "paint": {
-                "text-color": "#999999",
+                "text-color": "#938a8d",
                 "text-halo-color": "#ffffff",
+                "text-halo-width": 1
+            }
+        },
+        {
+            "id": "pois",
+            "type": "symbol",
+            "source": "protomaps",
+            "source-layer": "pois",
+            "filter": [
+                "all",
+                [
+                    "in",
+                    [
+                        "get",
+                        "kind"
+                    ],
+                    [
+                        "literal",
+                        [
+                            "beach",
+                            "forest",
+                            "marina",
+                            "park",
+                            "peak",
+                            "zoo",
+                            "garden",
+                            "bench",
+                            "aerodrome",
+                            "station",
+                            "bus_stop",
+                            "ferry_terminal",
+                            "stadium",
+                            "university",
+                            "library",
+                            "school",
+                            "animal",
+                            "toilets",
+                            "drinking_water"
+                        ]
+                    ]
+                ],
+                [
+                    ">=",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "+",
+                        [
+                            "get",
+                            "min_zoom"
+                        ],
+                        0
+                    ]
+                ]
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    [
+                        "get",
+                        "kind"
+                    ],
+                    "station",
+                    "train_station",
+                    [
+                        "get",
+                        "kind"
+                    ]
+                ],
+                "text-font": [
+                    "Noto Sans Regular"
+                ],
+                "text-justify": "auto",
+                "text-field": [
+                    "case",
+                    [
+                        "all",
+                        [
+                            "any",
+                            [
+                                "has",
+                                "name"
+                            ],
+                            [
+                                "has",
+                                "pgf:name"
+                            ]
+                        ],
+                        [
+                            "!",
+                            [
+                                "any",
+                                [
+                                    "has",
+                                    "name2"
+                                ],
+                                [
+                                    "has",
+                                    "pgf:name2"
+                                ]
+                            ]
+                        ],
+                        [
+                            "!",
+                            [
+                                "any",
+                                [
+                                    "has",
+                                    "name3"
+                                ],
+                                [
+                                    "has",
+                                    "pgf:name3"
+                                ]
+                            ]
+                        ]
+                    ],
+                    [
+                        "case",
+                        [
+                            "has",
+                            "script"
+                        ],
+                        [
+                            "case",
+                            [
+                                "any",
+                                [
+                                    "is-supported-script",
+                                    [
+                                        "get",
+                                        "name"
+                                    ]
+                                ],
+                                [
+                                    "has",
+                                    "pgf:name"
+                                ]
+                            ],
+                            [
+                                "format",
+                                [
+                                    "coalesce",
+                                    [
+                                        "get",
+                                        "name:en"
+                                    ],
+                                    [
+                                        "get",
+                                        "name:en"
+                                    ]
+                                ],
+                                {},
+                                "\n",
+                                {},
+                                [
+                                    "case",
+                                    [
+                                        "all",
+                                        [
+                                            "!",
+                                            [
+                                                "has",
+                                                "name:en"
+                                            ]
+                                        ],
+                                        [
+                                            "has",
+                                            "name:en"
+                                        ],
+                                        [
+                                            "!",
+                                            [
+                                                "has",
+                                                "script"
+                                            ]
+                                        ]
+                                    ],
+                                    "",
+                                    [
+                                        "coalesce",
+                                        [
+                                            "get",
+                                            "pgf:name"
+                                        ],
+                                        [
+                                            "get",
+                                            "name"
+                                        ]
+                                    ]
+                                ],
+                                {
+                                    "text-font": [
+                                        "case",
+                                        [
+                                            "==",
+                                            [
+                                                "get",
+                                                "script"
+                                            ],
+                                            "Devanagari"
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Devanagari Regular v1"
+                                            ]
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Regular"
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "get",
+                                "name:en"
+                            ]
+                        ],
+                        [
+                            "format",
+                            [
+                                "coalesce",
+                                [
+                                    "get",
+                                    "name:en"
+                                ],
+                                [
+                                    "get",
+                                    "pgf:name"
+                                ],
+                                [
+                                    "get",
+                                    "name"
+                                ]
+                            ],
+                            {}
+                        ]
+                    ],
+                    [
+                        "all",
+                        [
+                            "any",
+                            [
+                                "has",
+                                "name"
+                            ],
+                            [
+                                "has",
+                                "pgf:name"
+                            ]
+                        ],
+                        [
+                            "any",
+                            [
+                                "has",
+                                "name2"
+                            ],
+                            [
+                                "has",
+                                "pgf:name2"
+                            ]
+                        ],
+                        [
+                            "!",
+                            [
+                                "any",
+                                [
+                                    "has",
+                                    "name3"
+                                ],
+                                [
+                                    "has",
+                                    "pgf:name3"
+                                ]
+                            ]
+                        ]
+                    ],
+                    [
+                        "case",
+                        [
+                            "all",
+                            [
+                                "has",
+                                "script"
+                            ],
+                            [
+                                "has",
+                                "script2"
+                            ]
+                        ],
+                        [
+                            "format",
+                            [
+                                "get",
+                                "name:en"
+                            ],
+                            {},
+                            "\n",
+                            {},
+                            [
+                                "coalesce",
+                                [
+                                    "get",
+                                    "pgf:name"
+                                ],
+                                [
+                                    "get",
+                                    "name"
+                                ]
+                            ],
+                            {
+                                "text-font": [
+                                    "case",
+                                    [
+                                        "==",
+                                        [
+                                            "get",
+                                            "script"
+                                        ],
+                                        "Devanagari"
+                                    ],
+                                    [
+                                        "literal",
+                                        [
+                                            "Noto Sans Devanagari Regular v1"
+                                        ]
+                                    ],
+                                    [
+                                        "literal",
+                                        [
+                                            "Noto Sans Regular"
+                                        ]
+                                    ]
+                                ]
+                            },
+                            "\n",
+                            {},
+                            [
+                                "coalesce",
+                                [
+                                    "get",
+                                    "pgf:name2"
+                                ],
+                                [
+                                    "get",
+                                    "name2"
+                                ]
+                            ],
+                            {
+                                "text-font": [
+                                    "case",
+                                    [
+                                        "==",
+                                        [
+                                            "get",
+                                            "script2"
+                                        ],
+                                        "Devanagari"
+                                    ],
+                                    [
+                                        "literal",
+                                        [
+                                            "Noto Sans Devanagari Regular v1"
+                                        ]
+                                    ],
+                                    [
+                                        "literal",
+                                        [
+                                            "Noto Sans Regular"
+                                        ]
+                                    ]
+                                ]
+                            }
+                        ],
+                        [
+                            "case",
+                            [
+                                "has",
+                                "script2"
+                            ],
+                            [
+                                "format",
+                                [
+                                    "coalesce",
+                                    [
+                                        "get",
+                                        "name:en"
+                                    ],
+                                    [
+                                        "get",
+                                        "pgf:name"
+                                    ],
+                                    [
+                                        "get",
+                                        "name"
+                                    ]
+                                ],
+                                {},
+                                "\n",
+                                {},
+                                [
+                                    "coalesce",
+                                    [
+                                        "get",
+                                        "pgf:name2"
+                                    ],
+                                    [
+                                        "get",
+                                        "name2"
+                                    ]
+                                ],
+                                {
+                                    "text-font": [
+                                        "case",
+                                        [
+                                            "==",
+                                            [
+                                                "get",
+                                                "script2"
+                                            ],
+                                            "Devanagari"
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Devanagari Regular v1"
+                                            ]
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Regular"
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "format",
+                                [
+                                    "coalesce",
+                                    [
+                                        "get",
+                                        "name:en"
+                                    ],
+                                    [
+                                        "get",
+                                        "pgf:name2"
+                                    ],
+                                    [
+                                        "get",
+                                        "name2"
+                                    ]
+                                ],
+                                {},
+                                "\n",
+                                {},
+                                [
+                                    "coalesce",
+                                    [
+                                        "get",
+                                        "pgf:name"
+                                    ],
+                                    [
+                                        "get",
+                                        "name"
+                                    ]
+                                ],
+                                {
+                                    "text-font": [
+                                        "case",
+                                        [
+                                            "==",
+                                            [
+                                                "get",
+                                                "script"
+                                            ],
+                                            "Devanagari"
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Devanagari Regular v1"
+                                            ]
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Regular"
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ],
+                    [
+                        "case",
+                        [
+                            "all",
+                            [
+                                "has",
+                                "script"
+                            ],
+                            [
+                                "has",
+                                "script2"
+                            ],
+                            [
+                                "has",
+                                "script3"
+                            ]
+                        ],
+                        [
+                            "format",
+                            [
+                                "get",
+                                "name:en"
+                            ],
+                            {},
+                            "\n",
+                            {},
+                            [
+                                "coalesce",
+                                [
+                                    "get",
+                                    "pgf:name"
+                                ],
+                                [
+                                    "get",
+                                    "name"
+                                ]
+                            ],
+                            {
+                                "text-font": [
+                                    "case",
+                                    [
+                                        "==",
+                                        [
+                                            "get",
+                                            "script"
+                                        ],
+                                        "Devanagari"
+                                    ],
+                                    [
+                                        "literal",
+                                        [
+                                            "Noto Sans Devanagari Regular v1"
+                                        ]
+                                    ],
+                                    [
+                                        "literal",
+                                        [
+                                            "Noto Sans Regular"
+                                        ]
+                                    ]
+                                ]
+                            },
+                            "\n",
+                            {},
+                            [
+                                "coalesce",
+                                [
+                                    "get",
+                                    "pgf:name2"
+                                ],
+                                [
+                                    "get",
+                                    "name2"
+                                ]
+                            ],
+                            {
+                                "text-font": [
+                                    "case",
+                                    [
+                                        "==",
+                                        [
+                                            "get",
+                                            "script2"
+                                        ],
+                                        "Devanagari"
+                                    ],
+                                    [
+                                        "literal",
+                                        [
+                                            "Noto Sans Devanagari Regular v1"
+                                        ]
+                                    ],
+                                    [
+                                        "literal",
+                                        [
+                                            "Noto Sans Regular"
+                                        ]
+                                    ]
+                                ]
+                            },
+                            "\n",
+                            {},
+                            [
+                                "coalesce",
+                                [
+                                    "get",
+                                    "pgf:name3"
+                                ],
+                                [
+                                    "get",
+                                    "name3"
+                                ]
+                            ],
+                            {
+                                "text-font": [
+                                    "case",
+                                    [
+                                        "==",
+                                        [
+                                            "get",
+                                            "script3"
+                                        ],
+                                        "Devanagari"
+                                    ],
+                                    [
+                                        "literal",
+                                        [
+                                            "Noto Sans Devanagari Regular v1"
+                                        ]
+                                    ],
+                                    [
+                                        "literal",
+                                        [
+                                            "Noto Sans Regular"
+                                        ]
+                                    ]
+                                ]
+                            }
+                        ],
+                        [
+                            "case",
+                            [
+                                "!",
+                                [
+                                    "has",
+                                    "script"
+                                ]
+                            ],
+                            [
+                                "format",
+                                [
+                                    "coalesce",
+                                    [
+                                        "get",
+                                        "name:en"
+                                    ],
+                                    [
+                                        "get",
+                                        "pgf:name"
+                                    ],
+                                    [
+                                        "get",
+                                        "name"
+                                    ]
+                                ],
+                                {},
+                                "\n",
+                                {},
+                                [
+                                    "coalesce",
+                                    [
+                                        "get",
+                                        "pgf:name2"
+                                    ],
+                                    [
+                                        "get",
+                                        "name2"
+                                    ]
+                                ],
+                                {
+                                    "text-font": [
+                                        "case",
+                                        [
+                                            "==",
+                                            [
+                                                "get",
+                                                "script2"
+                                            ],
+                                            "Devanagari"
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Devanagari Regular v1"
+                                            ]
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Regular"
+                                            ]
+                                        ]
+                                    ]
+                                },
+                                "\n",
+                                {},
+                                [
+                                    "coalesce",
+                                    [
+                                        "get",
+                                        "pgf:name3"
+                                    ],
+                                    [
+                                        "get",
+                                        "name3"
+                                    ]
+                                ],
+                                {
+                                    "text-font": [
+                                        "case",
+                                        [
+                                            "==",
+                                            [
+                                                "get",
+                                                "script3"
+                                            ],
+                                            "Devanagari"
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Devanagari Regular v1"
+                                            ]
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Regular"
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "!",
+                                [
+                                    "has",
+                                    "script2"
+                                ]
+                            ],
+                            [
+                                "format",
+                                [
+                                    "coalesce",
+                                    [
+                                        "get",
+                                        "name:en"
+                                    ],
+                                    [
+                                        "get",
+                                        "pgf:name2"
+                                    ],
+                                    [
+                                        "get",
+                                        "name2"
+                                    ]
+                                ],
+                                {},
+                                "\n",
+                                {},
+                                [
+                                    "coalesce",
+                                    [
+                                        "get",
+                                        "pgf:name"
+                                    ],
+                                    [
+                                        "get",
+                                        "name"
+                                    ]
+                                ],
+                                {
+                                    "text-font": [
+                                        "case",
+                                        [
+                                            "==",
+                                            [
+                                                "get",
+                                                "script"
+                                            ],
+                                            "Devanagari"
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Devanagari Regular v1"
+                                            ]
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Regular"
+                                            ]
+                                        ]
+                                    ]
+                                },
+                                "\n",
+                                {},
+                                [
+                                    "coalesce",
+                                    [
+                                        "get",
+                                        "pgf:name3"
+                                    ],
+                                    [
+                                        "get",
+                                        "name3"
+                                    ]
+                                ],
+                                {
+                                    "text-font": [
+                                        "case",
+                                        [
+                                            "==",
+                                            [
+                                                "get",
+                                                "script3"
+                                            ],
+                                            "Devanagari"
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Devanagari Regular v1"
+                                            ]
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Regular"
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ],
+                            [
+                                "format",
+                                [
+                                    "coalesce",
+                                    [
+                                        "get",
+                                        "name:en"
+                                    ],
+                                    [
+                                        "get",
+                                        "pgf:name3"
+                                    ],
+                                    [
+                                        "get",
+                                        "name3"
+                                    ]
+                                ],
+                                {},
+                                "\n",
+                                {},
+                                [
+                                    "coalesce",
+                                    [
+                                        "get",
+                                        "pgf:name"
+                                    ],
+                                    [
+                                        "get",
+                                        "name"
+                                    ]
+                                ],
+                                {
+                                    "text-font": [
+                                        "case",
+                                        [
+                                            "==",
+                                            [
+                                                "get",
+                                                "script"
+                                            ],
+                                            "Devanagari"
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Devanagari Regular v1"
+                                            ]
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Regular"
+                                            ]
+                                        ]
+                                    ]
+                                },
+                                "\n",
+                                {},
+                                [
+                                    "coalesce",
+                                    [
+                                        "get",
+                                        "pgf:name2"
+                                    ],
+                                    [
+                                        "get",
+                                        "name2"
+                                    ]
+                                ],
+                                {
+                                    "text-font": [
+                                        "case",
+                                        [
+                                            "==",
+                                            [
+                                                "get",
+                                                "script2"
+                                            ],
+                                            "Devanagari"
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Devanagari Regular v1"
+                                            ]
+                                        ],
+                                        [
+                                            "literal",
+                                            [
+                                                "Noto Sans Regular"
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    ]
+                ],
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    17,
+                    10,
+                    19,
+                    16
+                ],
+                "text-max-width": 8,
+                "text-offset": [
+                    1.1,
+                    0
+                ],
+                "text-variable-anchor": [
+                    "left",
+                    "right"
+                ]
+            },
+            "paint": {
+                "text-color": [
+                    "case",
+                    [
+                        "in",
+                        [
+                            "get",
+                            "kind"
+                        ],
+                        [
+                            "literal",
+                            [
+                                "beach",
+                                "forest",
+                                "marina",
+                                "park",
+                                "peak",
+                                "zoo",
+                                "garden",
+                                "bench"
+                            ]
+                        ]
+                    ],
+                    "#20834D",
+                    [
+                        "in",
+                        [
+                            "get",
+                            "kind"
+                        ],
+                        [
+                            "literal",
+                            [
+                                "aerodrome",
+                                "station",
+                                "bus_stop",
+                                "ferry_terminal"
+                            ]
+                        ]
+                    ],
+                    "#315BCF",
+                    [
+                        "in",
+                        [
+                            "get",
+                            "kind"
+                        ],
+                        [
+                            "literal",
+                            [
+                                "stadium",
+                                "university",
+                                "library",
+                                "school",
+                                "animal",
+                                "toilets",
+                                "drinking_water"
+                            ]
+                        ]
+                    ],
+                    "#6A5B8F",
+                    "#e2dfda"
+                ],
+                "text-halo-color": "#e2dfda",
                 "text-halo-width": 1
             }
         },
@@ -8575,7 +9647,7 @@
             },
             "paint": {
                 "text-color": "#8f8f8f",
-                "text-halo-color": "#ffffff",
+                "text-halo-color": "#e0e0e0",
                 "text-halo-width": 1
             }
         },
@@ -9504,7 +10576,7 @@
             },
             "paint": {
                 "text-color": "#b3b3b3",
-                "text-halo-color": "#ffffff",
+                "text-halo-color": "#e0e0e0",
                 "text-halo-width": 1
             }
         },
@@ -10645,7 +11717,7 @@
             },
             "paint": {
                 "text-color": "#5c5c5c",
-                "text-halo-color": "#ffffff",
+                "text-halo-color": "#e0e0e0",
                 "text-halo-width": 1
             }
         },
@@ -10793,12 +11865,12 @@
                 "text-transform": "uppercase"
             },
             "paint": {
-                "text-color": "#b8b8b8",
-                "text-halo-color": "#ffffff",
+                "text-color": "#a3a3a3",
+                "text-halo-color": "#e2dfda",
                 "text-halo-width": 1
             }
         }
     ],
-    "sprite": "https://protomaps.github.io/basemaps-assets/sprites/v4/white",
+    "sprite": "https://protomaps.github.io/basemaps-assets/sprites/v4/light",
     "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf"
 }
