@@ -18,4 +18,4 @@ martin-host:
 	./martin -c config.yaml
 
 extract:
-	pmtiles extract --geojson=extent.geojson $(PMTILES_URL) v4.pmtiles
+	pmtiles extract --region=extent.geojson $(PMTILES_URL) v4.pmtiles
