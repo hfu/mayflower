@@ -4,5 +4,5 @@ listen_addresses: '0.0.0.0:3000'
 
 pmtiles:
   paths:
-#    - v4.pmtiles
-    - https://data.source.coop/protomaps/openstreetmap/v4.pmtiles
+    - v4.pmtiles
+#    - https://data.source.coop/protomaps/openstreetmap/v4.pmtiles
