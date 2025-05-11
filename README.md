@@ -2,6 +2,10 @@
 
 UNVT POD prototype of 2025 May, supported by copilot
 
+## このプロジェクトについて
+
+このプロジェクトは生成AIの支援を受けて開発されています。生成AIはコードの作成や改善、ドキュメントの補完など、さまざまな形でプロジェクトをサポートしています。
+
 ## Martin Installation / Martin のインストール
 
 To install Martin, run the following command:
