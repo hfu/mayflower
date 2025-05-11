@@ -1,0 +1,59 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [34.9595, 29.1859],
+            [34.9595, 33.3751],
+            [39.3011, 33.3751],
+            [39.3011, 29.1859],
+            [34.9595, 29.1859]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Jordan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [100.0, 10.0],
+            [100.0, 20.0],
+            [110.0, 20.0],
+            [110.0, 10.0],
+            [100.0, 10.0]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Indochina Peninsula"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [124.0, -10.0],
+            [124.0, -8.0],
+            [127.0, -8.0],
+            [127.0, -10.0],
+            [124.0, -10.0]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "East Timor"
+      }
+    }
+  ]
+}
